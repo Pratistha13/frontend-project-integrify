@@ -1,0 +1,24 @@
+@import  '../../styles/base';
+
+.sidebar{
+    padding-top: 10px;
+    padding-right: 40px;
+    min-width: 400px;
+    background-color: wheat;
+    &_drawer{
+        min-width: 250px;
+        .MuiDrawer-paperAcnhorRight{
+            left: auto;
+            right: 0;
+            width: 250px;
+        }
+    }
+    __drawer-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 20px ;
+
+    }
+
+}

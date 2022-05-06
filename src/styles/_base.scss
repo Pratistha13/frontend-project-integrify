@@ -1,0 +1,46 @@
+//Basic setup, colour and font
+@import './reset';
+
+
+// All variables
+$primary: #52AEDF;
+$hover: #2197D6;
+$white: #ffffff;
+$textMain: #3d3c6b;
+$textDark: #373846;
+$grey: #5e5f69;
+$light:#e6e6fa;
+$bgWhite: #f7f8fc;
+$font-family: 'Poppins', sans-serif;
+$menu-highlight: #dde2ff;
+$error: #cf000f;
+$success: #009944;
+$box-shadow: 0px 11px 20px rgba(0, 0, 0, 0.04);
+$font-weights: (
+  'regular': 400,
+  'medium': 600,
+  'bold': 700,
+);
+$max-width: 1040px;
+:root {
+  font-size: 8px;
+  font-weight: weight(regular);
+  font-family: $font-family;
+};
+
+.container{
+  max-width: $max-width;
+  margin: auto;
+};
+
+h2{
+  font-size: 3rem;
+  font-family: $font-family;
+  font-weight: weight(regular);
+}
+
+.MuiInputBase-input{
+  font-family: $font-family;
+  color: rgb(56, 51, 51);
+  font-size: 2rem;
+}
