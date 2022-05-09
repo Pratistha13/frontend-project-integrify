@@ -21,7 +21,12 @@ const Navbar = (props: NavbarProps) => {
     <div className="navbar">
       <div className="navbar_content container">
         {/* logo area */}
-        <div className="navbar_content-left">Country App</div>
+        <div className="navbar_content-left">
+          <img
+            src={process.env.PUBLIC_URL + '/Images/world_logo.jpg'}
+            alt="world logo"
+          />
+        </div>
         {/* Search area */}
         <div className="navbar_content-search">
           <Search />

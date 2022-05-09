@@ -5,27 +5,25 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.6.2",
     "@mui/material": "^5.6.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react-dom": "^16.9.0",
-    "@types/react-redux": "^7.1.7",
-    "@types/react-router-dom": "^5.3.3",
-    "@types/redux-saga": "^0.10.5",
+    "@types/node-sass": "^4.11.2",
     "@types/redux-thunk": "^2.1.0",
-    "axios": "^0.27.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-redux": "^7.2.8",
-    "react-router-dom": "^5.3.1",
+    "react-icons": "^4.3.1",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.0",
-    "redux": "^4.2.0",
+    "redux": "^4.0.5",
     "redux-saga": "^1.1.3",
     "redux-thunk": "^2.4.1",
+    "tar": "^6.1.11",
     "typescript": "~3.9.10"
   },
   "scripts": {
@@ -51,9 +49,12 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.182",
     "@types/react": "^16.9.35",
+    "@types/react-router-dom": "^5.3.3",
     "husky": "^4.2.3",
-    "lint-staged": "^10.0.7"
+    "lint-staged": "^10.0.7",
+    "sass": "^1.51.0"
   },
   "husky": {
     "hooks": {

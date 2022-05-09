@@ -4,6 +4,9 @@
 
     height: 80px;
     padding-top: 10px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: rgb(157, 118, 71);
 
     &_content{
         display: flex;
@@ -21,9 +24,15 @@
 
     &_content-left{
     
-        max-width: 120px; 
-        height:auto;
-        width: auto;
+        img{
+            max-width: 150px;
+            height: 70px;
+            width: auto;
+            padding-bottom: 1rem;
+            border-radius: 50%;
+            
+        } 
+    
     }
 
     &_content-cart{

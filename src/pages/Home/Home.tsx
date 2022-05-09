@@ -1,15 +1,26 @@
 import React from 'react'
-import { Button } from '@mui/material'
+import { useDispatch } from 'react-redux'
 
 import Navbar from '../../components/Navbar/Navbar'
-import Sidebar from '../../components/Navbar/Sidebar/Sidebar'
+import Sidebar from '../../components/Sidebar/Sidebar'
+import CountryList from '../../components/CountryList/CountryList'
+
+import { fetchAllCountries } from '../../redux/actions'
 
 import './home.scss'
 
 const Home = () => {
   const [drawerState, setDrawerState] = React.useState(false)
 
-  //handle drawer stater
+  //initializing dispatch
+  const dispatch = useDispatch()
+
+  //dispatch fetchAllCountries on page load
+  React.useEffect(() => {
+    dispatch(fetchAllCountries())
+  }, [dispatch])
+
+  //handle drawer state
   const handleDrawerState = (state: boolean) => {
     setDrawerState(state)
   }
@@ -19,8 +30,7 @@ const Home = () => {
       {/*nabvar component */}
       <Navbar onClick={handleDrawerState} drawerState={drawerState} />
       <Sidebar onClick={handleDrawerState} drawerState={drawerState} />
-      HomePage
-      <Button color="primary">Hello World</Button>
+      <CountryList />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Drawer from '@mui/material/Drawer'
 import CloseIcon from '@mui/icons-material/Close'
+import './sidebar.scss'
 
 interface SidebarProps {
   onClick: Function
@@ -25,12 +26,26 @@ const Sidebar = (props: SidebarProps) => {
         onClose={onDrawerClose}
         className="sidebar_drawer"
       >
-        <div className="sidebar__drawer-content">
-          <CloseIcon className="sidebar__close-menu" />
+        <div className="sidebar_drawer-content">
+          <CloseIcon onClick={onDrawerClose} className="sidebar_close-menu" />
           {/*Themes*/}
 
-          <div className="sidebar__navigation">
+          <div className="sidebar_navigation">
             <h2>Themes</h2>
+            <ul>
+              <li>
+                <h2> Blue </h2>
+              </li>
+              <span className="sidebar_navigation_blue-box"></span>
+              <li>
+                <h2> Green </h2>
+              </li>
+              <span className="sidebar_navigation_green-box"></span>
+              <li>
+                <h2> Red </h2>
+              </li>
+              <span className="sidebar_navigation_red-box"></span>
+            </ul>
           </div>
         </div>
       </Drawer>
