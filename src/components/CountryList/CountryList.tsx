@@ -32,11 +32,7 @@ const CountryList = () => {
 
           {!isLoading &&
             countries &&
-            countries.map(
-              (country: { flag: string; name: string; region: string }) => (
-                <CountryCard {...country} />
-              )
-            )}
+            countries.map((country) => <CountryCard {...country} />)}
         </div>
       </div>
     </div>
