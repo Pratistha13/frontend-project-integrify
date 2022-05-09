@@ -1,9 +1,16 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
+import { AppState } from '../redux/reducers/index'
 
 import createRootReducer from './reducers'
 
-const initState = {}
+const initState: AppState = {
+  countryReducer: {
+    countries: [],
+    isLoading: false,
+    error: '',
+  },
+}
 
 export default function makeStore(initialState = initState) {
   const middlewares = [thunk]

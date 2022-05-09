@@ -16,7 +16,7 @@ export function fetchAllCountriesLoading(): CountryActions {
 }
 
 //fetch countries with success
-export function fetchAllCountriesSuccess(countries: []): CountryActions {
+export function fetchAllCountriesSuccess(countries: any): any {
   return {
     type: FETCH_COUNTRIES_SUCCESS,
     payload: countries,
@@ -33,8 +33,9 @@ export function fetchAllCountriesFailure(error: string): CountryActions {
 
 //fetch countries data
 export function fetchAllCountries() {
-  return (dispatch: Dispatch) => {
-    axios
+  return async (dispatch: Dispatch) => {
+    dispatch({ type: FETCH_COUNTRIES_LOADING })
+    await axios
       .get('https://restcountries.com/v3.1/all')
       .then((res) => {
         const countries = res.data

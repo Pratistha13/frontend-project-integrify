@@ -1,13 +1,13 @@
 @import '../../styles/base';
 
-.country-list{
-    margin-top: 5rem auto 0 auto;
-    max-width: 600px;
-    
+.country-list{    
+    margin:5rem auto 0 auto;
+    max-width: $max-width;
+
     &__cards{
-        display:flex !important;
-        justify-content: space-evenly;
+        display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
-
+         
 }

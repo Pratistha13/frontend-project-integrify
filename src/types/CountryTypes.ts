@@ -5,10 +5,22 @@ export const FETCH_COUNTRIES_FAILURE = 'FETCH_COUNTRIES_FAILURE'
 
 //types
 
-export type CountryReducerState = {
-  countries: []
-  isLoading: boolean
-  error: string
+export type Country = {
+  [index: string]: number | string | Array<string | number> | Object
+  name: {
+    common: string
+  }
+  flags: string
+  region: string
+  languages: Languages[]
+  population: number
+  borders: string[]
+  svg: string
+}
+
+export type Languages = {
+  name: string
+  nativeName: string
 }
 //action types
 export type FetchAllCountriesLoadingAction = {

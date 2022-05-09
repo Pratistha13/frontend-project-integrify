@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux'
-
 import countryReducer from './CountryReducer'
 
-const createRootReducer = () =>
-  combineReducers({
-    countryReducer,
-  })
+const rootReducer = combineReducers({
+  countryReducer,
+})
 
-export default createRootReducer
+export type AppState = ReturnType<typeof rootReducer>
+export default rootReducer
