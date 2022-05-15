@@ -1,38 +1,39 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import { AppState } from '../redux/reducers/index'
+import rootReducer, { AppState } from './Reducers'
 
-import createRootReducer from './reducers'
-
-const initState: AppState = {
+const storeInitialState: AppState = {
   countryReducer: {
     countries: [],
-    isLoading: false,
     error: '',
+    isLoading: false,
+  },
+
+  cartReducer: {
+    cart: [],
   },
 }
 
-export default function makeStore(initialState = initState) {
+export default function makeStore(initialState = storeInitialState) {
   const middlewares = [thunk]
+
   let composeEnhancers = compose
 
-  //redux dev tool setup
   if (process.env.NODE_ENV === 'development') {
     if ((window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
       composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     }
   }
 
-  //create redux store
   const store = createStore(
-    createRootReducer,
-    initialState,
+    rootReducer,
+    storeInitialState,
     composeEnhancers(applyMiddleware(...middlewares))
   )
 
   if ((module as any).hot) {
-    ;(module as any).hot.accept('./reducers', () => {
-      const nextReducer = require('./reducers').default
+    ;(module as any).hot.accept('./Reducers', () => {
+      const nextReducer = require('./Reducers').default
       store.replaceReducer(nextReducer)
     })
   }

@@ -1,9 +1,7 @@
 import React from 'react'
-import './styles/_base.scss' //base style
 
 import { createTheme } from '@mui/material'
 import { ThemeProvider } from '@mui/material'
-
 import Routers from './Routers'
 
 const theme = createTheme({

@@ -1,0 +1,45 @@
+svg {
+    z-index: 1;
+  }
+  
+  #right-wheel,
+  #left-wheel1
+  {
+      animation: wheel 2s linear infinite;
+      transform-origin: 50% 50%;
+      transform-box: fill-box;
+  }
+  
+  /* Animation Wheels */
+  @-webkit-keyframes wheel {
+      from {
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }
+  @-o-keyframes wheel {
+      from {
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }
+  @-moz-keyframes wheel {
+      from {
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }
+  @keyframes wheel {
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }
