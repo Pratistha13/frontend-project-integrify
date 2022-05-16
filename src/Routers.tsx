@@ -8,8 +8,8 @@ const Routers = () => (
   /* render all routes here*/
 
   <Switch>
-    <Route path="/" component={HomePage} />
-    <Route path="/Country/:id" component={CountryPage} />
+    <Route exact path="/" component={HomePage} />
+    <Route exact path="/:countryName" component={CountryPage} />
   </Switch>
 )
 

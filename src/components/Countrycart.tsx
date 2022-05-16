@@ -52,7 +52,8 @@ const Countrycart = () => {
         component="h4"
         style={{ textAlign: 'center', display: 'inline-block' }}
       >
-        {cartState.length === 0 && <p> No Items in Cart </p>}
+        {cartState.length === 0 && <p> No Countries in Cart </p>}
+        {cartState.length !== 0 && <p> Countries in Cart </p>}
       </Typography>
       {cartState.map(
         (item: CountryProps, index: React.Key | null | undefined) => (

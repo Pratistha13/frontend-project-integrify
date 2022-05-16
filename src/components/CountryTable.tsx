@@ -30,7 +30,7 @@ const columns = ['flag', 'name', 'population', 'region']
 const CountryTable = ({ countries }: any) => {
   const classes = useStyles()
   const dispatch = useDispatch()
-  const itemState = useSelector((state: AppState) => state.cartReducer.cart)
+  const cartState = useSelector((state: AppState) => state.cartReducer.cart)
 
   const [paginatedCountries, setPaginatedCountries] = useState([])
 
@@ -102,7 +102,7 @@ const CountryTable = ({ countries }: any) => {
                     </TableCell>
 
                     <TableCell align="center" style={{ minWidth: 170 }}>
-                      {itemState.find(
+                      {cartState.find(
                         (item: { name: any }) =>
                           item.name.common === country.name.common
                       ) ? (
